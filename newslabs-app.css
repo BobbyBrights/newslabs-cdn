@@ -1,0 +1,54 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+a.fakea{
+    color: blue;
+    cursor: pointer;
+}
+a.fakea:hover{
+    text-decoration: underline;
+}
+.title{
+    text-transform: uppercase;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+#whoami{
+    float: right;
+}
+body{
+    margin-bottom: 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding: 1rem 0;
+    background-color: #a91717;
+    color: white;
+    border-bottom: 0.5px solid silver;
+    box-shadow: 0 0 10px lightgray;
+    font-size: 120%;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 1rem 0;
+    background-color: whitesmoke;
+    border-top: 0.5px solid silver;
+    box-shadow: 0 0 10px lightgray;
+    z-index: 999999;
+}
+img.teamlogo{
+    width: 50px;
+    float: right;
+    margin-left: 1rem;
+}
+img.labslogo{
+    float: left;
+    height: 50px;
+    margin-right: 1rem;
+}
+img.bbclogo{
+    height: 1.5rem;
+    margin: 0 .5rem .5rem 0;
+}

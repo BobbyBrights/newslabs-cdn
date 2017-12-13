@@ -33,7 +33,6 @@ bbcnpf.utils.registerPlayer=function(videoplayer)
 {
     if (typeof(videoplayer)!=='undefined' && videoplayer.tagName.toLowerCase()=='video')
     {
-        console.log('registerPlayer', videoplayer)
         bbcnpf.utils.$registeredPlayer=videoplayer
         bbcnpf.utils.$registeredPlayerCurrentFrame=bbcnpf.utils.seconds2frames(bbcnpf.utils.$registeredPlayer.currentTime)
         bbcnpf.utils.$registeredPlayerPrevFrame=bbcnpf.utils.$registeredPlayerCurrentFrame

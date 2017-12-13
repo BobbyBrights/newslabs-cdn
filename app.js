@@ -148,7 +148,7 @@ bbc.newslabs.fImport("https://code.jquery.com/jquery-2.2.4.min.js")
 bbc.newslabs.fImport("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 bbc.newslabs.fImport("bbcnpf.utils.js")
 bbc.newslabs.fAddFile("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/newslabs-app.css")
+bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
 
 // defined alias
 _import=bbc.newslabs.fImport

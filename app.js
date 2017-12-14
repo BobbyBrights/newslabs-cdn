@@ -42,9 +42,9 @@ bbc.newslabs.fLogin=function(retval)
 bbc.newslabs.fFooter=function()
 {
     var h='<div class=container>'
-        + '<img class=labslogo src="https://cdn.newslabs.co/newslabs-logo.svg">'
+        + '<img class=labslogo src="http://cdn.newslabs.co/newslabs-logo.svg">'
         + '<img class=teamlogo title="' + this.fGetMeta('author') + '" src="' + this.fGetMeta('teamlogo') + '">'
-        + '<img class=bbclogo src="https://cdn.newslabs.co/bbc-blocks-dark.png">'
+        + '<img class=bbclogo src="http://cdn.newslabs.co/bbc-blocks-dark.png">'
         + ' This is a <a target="_blank" href="http://bbcnewslabs.co.uk/">BBC News Labs</a> prototype.'
         + ' If you have any comments or suggested improvements for this prototype, want to report a problem or have a brilliant idea, please do '
         + '<a href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">drop us a line</a> and we will reply as soon as we can.'
@@ -146,10 +146,10 @@ bbc.newslabs.fImport=function(ref)
 // inject these standard dependencies
 bbc.newslabs.fImport("https://code.jquery.com/jquery-2.2.4.min.js")
 bbc.newslabs.fImport("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-bbc.newslabs.fImport("https://cdn.newslabs.co/bbcnpf.utils.js")
+bbc.newslabs.fImport("http://cdn.newslabs.co/bbcnpf.utils.js")
 
 bbc.newslabs.fAddFile("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-bbc.newslabs.fAddFile("https://cdn.newslabs.co/app.css")
+bbc.newslabs.fAddFile("http://cdn.newslabs.co/app.css")
 
 // defined alias
 _import=bbc.newslabs.fImport

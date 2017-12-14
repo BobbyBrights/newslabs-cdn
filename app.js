@@ -42,9 +42,9 @@ bbc.newslabs.fLogin=function(retval)
 bbc.newslabs.fFooter=function()
 {
     var h='<div class=container>'
-        + '<img class=labslogo src="newslabs-logo.svg">'
+        + '<img class=labslogo src="https://bbc.github.io/newslabs-cdn/newslabs-logo.svg">'
         + '<img class=teamlogo title="' + this.fGetMeta('author') + '" src="' + this.fGetMeta('teamlogo') + '">'
-        + '<img class=bbclogo src="https://static.bbci.co.uk/frameworks/barlesque/3.21.13/orb/4/img/bbc-blocks-dark.png">'
+        + '<img class=bbclogo src="https://bbc.github.io/newslabs-cdn/bbc-blocks-dark.png">'
         + ' This is a <a target="_blank" href="http://bbcnewslabs.co.uk/">BBC News Labs</a> prototype.'
         + ' If you have any comments or suggested improvements for this prototype, want to report a problem or have a brilliant idea, please do '
         + '<a href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">drop us a line</a> and we will reply as soon as we can.'

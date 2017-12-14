@@ -5,7 +5,7 @@ bbc.newslabs=bbc.newslabs||{}
 bbc.newslabs.fHeader=function()
 {
     var h='<div class=container>'
-        + '<span class=title>' + this.fGetMeta('app') + '</span> a BBC News Labs prototype'
+        + '<span class=title>' + this.fGetMeta('app') + '</span>:: &nbsp;A BBC News Labs prototype'
         + '<span id=whoami><a class=fakea style=color:white onclick=bbc.newslabs.fLogin()>Login</a></span>'
         + '</div>'
 
@@ -21,7 +21,7 @@ bbc.newslabs.fHeader=function()
         b.insertBefore(e, b.firstChild)
     }
 
-    document.title=this.fGetMeta('app') + ' a BBC News Labs prototype'
+    document.title=this.fGetMeta('app') + ' :: A BBC News Labs prototype'
 }
 
 bbc.newslabs.fLogin=function(retval)

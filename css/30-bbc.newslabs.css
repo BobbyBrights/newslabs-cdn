@@ -3,6 +3,8 @@
  * BBC News Labs - std CSS
  *
  */
+/* Include the reith font (used in header and footer) */
+@import('fonts/reith/font.css');
 a.fakea{
     color: blue;
     cursor: pointer;
@@ -13,8 +15,11 @@ a.fakea:hover{
 body{
     margin-top: 60px;
     margin-bottom: 100px;
+    font-size: 11pt;
 }
 header{
+    font-family: "Reith Sans";
+    font-size: 13.5pt;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -23,9 +28,10 @@ header{
     color: white;
     border-bottom: 0.5px solid silver;
     box-shadow: 0 0 10px lightgray;
-    font-size: 120%;
 }
 footer{
+    font-family: "Reith Sans";
+    font-size: 12pt;
     position: fixed;
     width: 100%;
     bottom: 0px;

@@ -146,7 +146,7 @@ bbc.newslabs.fImport=function(ref)
 // helper to add a font
 bbc.newslabs.addFont=function(name)
 {
-    this.fImport('https://bbc.github.io/newslabs-cdn/fonts/' + name.toLowerCase() + '/font.css')
+    this.fAddFile('https://bbc.github.io/newslabs-cdn/fonts/' + name.toLowerCase() + '/font.css')
 }
 
 // inject these standard dependencies

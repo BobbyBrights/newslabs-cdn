@@ -1,0 +1,44 @@
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Reith Sans Light'), url('ReithSans_W_Lt.woff2') format('woff2'), url('ReithSans_W_Lt.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Reith Sans Regular'), url('ReithSans_W_Rg.woff2') format('woff2'), url('ReithSans_W_Rg.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Reith Sans Bold'), url('ReithSans_W_Bd.woff2') format('woff2'), url('ReithSans_W_Bd.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Reith Sans XBold'), url('ReithSans_W_ExBd.woff2') format('woff2'), url('ReithSans_W_ExBd.woff') format('woff');
+}
+
+.reithsanslt{
+	font-family: 'Reith Sans';
+	font-weight: 300;
+}
+.reithsans{
+	font-family: 'Reith Sans';
+	font-weight: 400;
+}
+.reithsansbd{
+	font-family: 'Reith Sans';
+	font-weight: 700;
+}
+.reithsansxbd{
+	font-family: 'Reith Sans';
+	font-weight: 800;
+}

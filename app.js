@@ -143,6 +143,12 @@ bbc.newslabs.fImport=function(ref)
     }
 }
 
+// helper to add a font
+bbc.newslabs.addFont=function(name)
+{
+    this.fImport('https://bbc.github.io/newslabs-cdn/fonts/' + name.toLowerCase() + '/font.css')
+}
+
 // inject these standard dependencies
 bbc.newslabs.fImport("https://code.jquery.com/jquery-2.2.4.min.js")
 bbc.newslabs.fImport("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")

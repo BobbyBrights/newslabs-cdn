@@ -149,6 +149,15 @@ bbc.newslabs.addFont=function(name)
     this.fAddFile('https://bbc.github.io/newslabs-cdn/fonts/' + name.toLowerCase() + '/font.css')
 }
 
+// ensure the page had a viewport meta
+if (!document.getElementsByTagName('meta')["viewport"])
+{
+    var e=document.createElement('meta')
+    e.name='viewport'
+    e.content='width=device-width,initial-scale=1.0'
+    void(document.getElementsByTagName('head')[0].appendChild(e))
+}
+
 // inject these standard dependencies
 bbc.newslabs.fImport("https://code.jquery.com/jquery-2.2.4.min.js")
 bbc.newslabs.fImport("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")

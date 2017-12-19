@@ -7,7 +7,6 @@ a.fakea:hover{
     text-decoration: underline;
 }
 .title{
-    text-transform: uppercase;
     margin-right: 1rem;
     font-weight: bold;
 }
@@ -15,6 +14,7 @@ a.fakea:hover{
     float: right;
 }
 body{
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 header{

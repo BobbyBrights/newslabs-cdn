@@ -211,9 +211,9 @@ bbc.newslabs=bbc.newslabs||{}
 // build a standard header, based on meta tags
 bbc.newslabs.fHeader=function()
 {
-    var h='<div class=container>'
-        + '<span class=title>' + this.fGetMeta('app') + '</span>:: &nbsp;A BBC News Labs prototype'
-        + '<span id=whoami><a class=fakea style=color:white onclick=bbc.newslabs.fLogin()>Login</a></span>'
+    var h='<div class="container">'
+        + '<span style="margin-right:1rem;font-weight:bold;">' + this.fGetMeta('app') + '</span>:: &nbsp;A BBC News Labs prototype'
+        + '<span style="float:right;" id="whoami"><a class="fakea" style="color:white;" onclick="bbc.newslabs.fLogin()">Login</a></span>'
         + '</div>'
 
     var headers=document.getElementsByTagName('header')
@@ -248,10 +248,15 @@ bbc.newslabs.fLogin=function(retval)
 // build a standard footer, based on meta tags
 bbc.newslabs.fFooter=function()
 {
-    var h='<div class=container>'
-        + '<img class=labslogo src="https://bbc.github.io/newslabs-cdn/newslabs-logo.svg">'
-        + '<img class=teamlogo title="' + this.fGetMeta('author') + '" src="' + this.fGetMeta('teamlogo') + '">'
-        + '<img class=bbclogo src="https://bbc.github.io/newslabs-cdn/bbc-blocks-dark.png">'
+    var tl=this.fGetMeta('teamlogo')
+
+    var h='<div class="container"><img style="float:left;height:50px;margin-right:1rem;" src="https://bbc.github.io/newslabs-cdn/newslabs-logo.svg">'
+
+    if (tl.length>0) {
+        h+='<img style="float:right;height:50px;margin-left:1rem;" title="' + this.fGetMeta('author') + '" src="' + tl + '">'
+    }
+
+    h+='<img style="height:1.5rem;margin:0 0.5rem 0.5rem 0;" class=bbclogo src="https://bbc.github.io/newslabs-cdn/bbc-blocks-dark.png">'
         + ' This is a <a target="_blank" href="http://bbcnewslabs.co.uk/">BBC News Labs</a> prototype.'
         + ' If you have any comments or suggested improvements for this prototype, want to report a problem or have a brilliant idea, please do '
         + '<a href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">drop us a line</a> and we will reply as soon as we can.'

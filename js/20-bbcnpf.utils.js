@@ -1,3 +1,8 @@
+
+/*
+ * General broadcast-related utils
+ *
+ */
 var bbcnpf=bbcnpf||{}
 bbcnpf.utils=bbcnpf.utils||{}
 

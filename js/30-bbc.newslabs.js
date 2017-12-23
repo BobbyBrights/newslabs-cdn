@@ -169,6 +169,7 @@ if (!document.getElementsByTagName('meta')["viewport"])
 }
 
 // add the std css file (which itself brings includes bootstrap)
+bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/fonts/reith/font.css")
 bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
 
 // defined alias

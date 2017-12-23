@@ -9,7 +9,6 @@
  *
  */
 /* Include the reith font (used in header and footer) */
-@import url(https://bbc.github.io/newslabs-cdn/fonts/reith/font.css);
 a.fakea{
     color: blue;
     cursor: pointer;

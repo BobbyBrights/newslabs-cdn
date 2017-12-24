@@ -1,0 +1,48 @@
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Lt.woff2') format('woff2'),
+        url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Lt.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Rg.woff2') format('woff2'),
+        url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Rg.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Bd.woff2') format('woff2'),
+        url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_Bd.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Reith Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_ExBd.woff2') format('woff2'),
+        url('https://bbc.github.io/newslabs-cdn/fonts/reith/ReithSans_W_ExBd.woff') format('woff');
+}
+
+.reithsanslt{
+	font-family: 'Reith Sans';
+	font-weight: 300;
+}
+.reithsans{
+	font-family: 'Reith Sans';
+	font-weight: 400;
+}
+.reithsansbd{
+	font-family: 'Reith Sans';
+	font-weight: 700;
+}
+.reithsansxbd{
+	font-family: 'Reith Sans';
+	font-weight: 800;
+}

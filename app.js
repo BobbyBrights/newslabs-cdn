@@ -211,7 +211,7 @@ bbc.newslabs=bbc.newslabs||{}
 // build a standard header, based on meta tags
 bbc.newslabs.fHeader=function()
 {
-    var h='<div class="container">'
+    var h='<div class="container ReithSans-normal-normal">'
         + '<span style="margin-right:1rem;font-weight:bold;">' + this.fGetMeta('app') + '</span>:: &nbsp;A BBC News Labs prototype'
         + '<span style="float:right;" id="whoami"><a class="fakea" style="color:white;" onclick="bbc.newslabs.fLogin()">Login</a></span>'
         + '</div>'
@@ -250,7 +250,7 @@ bbc.newslabs.fFooter=function()
 {
     var tl=this.fGetMeta('teamlogo')
 
-    var h='<div class="container"><img style="float:left;height:50px;margin-right:1rem;" src="https://bbc.github.io/newslabs-cdn/newslabs-logo.svg">'
+    var h='<div class="container ReithSans-normal-normal"><img style="float:left;height:50px;margin-right:1rem;" src="https://bbc.github.io/newslabs-cdn/newslabs-logo.svg">'
 
     if (tl.length>0) {
         h+='<img style="float:right;height:50px;margin-left:1rem;" title="' + this.fGetMeta('author') + '" src="' + tl + '">'

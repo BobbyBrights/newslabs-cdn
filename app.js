@@ -57,6 +57,25 @@ bbcnpf.utils.registerPlayer=function(videoplayer)
         bbcnpf.utils.$registeredPlayerCurrentFrame=bbcnpf.utils.seconds2frames(bbcnpf.utils.$registeredPlayer.currentTime)
         bbcnpf.utils.$registeredPlayerPrevFrame=bbcnpf.utils.$registeredPlayerCurrentFrame
         videoplayer.addEventListener('play', bbcnpf.utils.playerPlaying)
+        videoplayer.addEventListener('seeking', bbcnpf.utils.playerUpdateFrame)
+        videoplayer.addEventListener('seeked', bbcnpf.utils.playerUpdateFrame)
+    }
+}
+
+bbcnpf.utils.playerUpdateFrame=function()
+{
+    bbcnpf.utils.$registeredPlayerCurrentFrame=bbcnpf.utils.seconds2frames(bbcnpf.utils.$registeredPlayer.currentTime)
+    if (bbcnpf.utils.$registeredPlayerCurrentFrame!=bbcnpf.utils.$registeredPlayerPrevFrame)
+    {
+        for (var f in bbcnpf.utils.$registeredOnFrameCallbacks)
+        {
+            setTimeout(bbcnpf.utils.$registeredOnFrameCallbacks[f]({
+                "seconds": bbcnpf.utils.$registeredPlayer.currentTime,
+                "frames": bbcnpf.utils.$registeredPlayerCurrentFrame,
+                "timecode": bbcnpf.utils.seconds2timecode(bbcnpf.utils.$registeredPlayer.currentTime),
+            }), 0)
+        }
+        bbcnpf.utils.$registeredPlayerPrevFrame=bbcnpf.utils.$registeredPlayerCurrentFrame
     }
 }
 
@@ -67,19 +86,7 @@ bbcnpf.utils.playerPlaying=function()
         bbcnpf.utils.$registeredPlayerCurrentFrame=bbcnpf.utils.seconds2frames(bbcnpf.utils.$registeredPlayer.currentTime)
         bbcnpf.utils.$registeredPlayerPrevFrame=bbcnpf.utils.$registeredPlayerCurrentFrame
     } else {
-        bbcnpf.utils.$registeredPlayerCurrentFrame=bbcnpf.utils.seconds2frames(bbcnpf.utils.$registeredPlayer.currentTime)
-        if (bbcnpf.utils.$registeredPlayerCurrentFrame!=bbcnpf.utils.$registeredPlayerPrevFrame)
-        {
-            for (var f in bbcnpf.utils.$registeredOnFrameCallbacks)
-            {
-                setTimeout(bbcnpf.utils.$registeredOnFrameCallbacks[f]({
-                    "seconds": bbcnpf.utils.$registeredPlayer.currentTime,
-                    "frames": bbcnpf.utils.$registeredPlayerCurrentFrame,
-                    "timecode": bbcnpf.utils.seconds2timecode(bbcnpf.utils.$registeredPlayer.currentTime),
-                }), 0)
-            }
-            bbcnpf.utils.$registeredPlayerPrevFrame=bbcnpf.utils.$registeredPlayerCurrentFrame
-        }
+        bbcnpf.utils.playerUpdateFrame()
         requestAnimationFrame(bbcnpf.utils.playerPlaying)
     }
 }

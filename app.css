@@ -23,7 +23,7 @@ body{
 }
 header{
     font-family: "Reith Sans";
-    font-size: 13.5pt;
+    font-size: 11pt;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -35,7 +35,7 @@ header{
 }
 footer{
     font-family: "Reith Sans";
-    font-size: 12pt;
+    font-size: 9pt;
     position: fixed;
     width: 100%;
     bottom: 0px;

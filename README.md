@@ -26,7 +26,7 @@ class App extends Component {
 
 export default App;
 ```
-The important departure from the as-supplied file is removal of the <header> element.
+The important departure from the as-supplied file is removal of the `<header>` element.
 
 *public/index.html* now contains (comments removed here):
 ```<!DOCTYPE html>

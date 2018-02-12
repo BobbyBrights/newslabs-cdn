@@ -57,7 +57,7 @@ bbc.newslabs.fFooter=function()
     h+='<img style="height:1.5rem;margin:0 0.5rem 0.5rem 0;" class=bbclogo src="https://bbc.github.io/newslabs-cdn/bbc-blocks-dark.png">'
         + ' This is a <a target="_blank" href="http://bbcnewslabs.co.uk/">BBC News Labs</a> prototype.'
         + ' <a target=_blank href=http://newslabs.tools.bbc.co.uk>Find out what else we\'re working on.</a>'
-        + ' For support, suggestions or feedback, '
+        + '<br>For support, suggestions or feedback, '
         + '<a href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">get in touch!</a>'
         + '</div>'
 

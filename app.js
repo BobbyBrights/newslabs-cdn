@@ -265,8 +265,9 @@ bbc.newslabs.fFooter=function()
 
     h+='<img style="height:1.5rem;margin:0 0.5rem 0.5rem 0;" class=bbclogo src="https://bbc.github.io/newslabs-cdn/bbc-blocks-dark.png">'
         + ' This is a <a target="_blank" href="http://bbcnewslabs.co.uk/">BBC News Labs</a> prototype.'
-        + ' If you have any comments or suggested improvements for this prototype, want to report a problem or have a brilliant idea, please do '
-        + '<a href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">drop us a line</a> and we will reply as soon as we can.'
+        + ' <a style=font-weight:bold target=_blank href=http://newslabs.tools.bbc.co.uk>Find out what else we\'re working on.</a>'
+        + ' For support, suggestions or feedback, '
+        + '<a style=font-weight:bold href="mailto:newslabs-development@lists.forge.bbc.co.uk?subject=' + this.fGetMeta('app') + '+product+feedback">get in touch!</a>'
         + '</div>'
 
     var footers=document.getElementsByTagName('footer')

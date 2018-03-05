@@ -386,8 +386,16 @@ bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/fonts/reith/font.css")
 // a css bundle, includes bootstrap
 bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
 
-// for SMP
-bbc.newslabs.fAddFile("http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js")
+// check that requirejs has been injected in the defining document. alert if not and suggest a remedy.
+// it is required for SMP to embed correctly.
+var haveRequire=false
+document.querySelectorAll('script').forEach(function(script){
+    if(script.src.indexOf('/require.js')>-1)haveRequire=true
+})
+if(!haveRequire){
+    console.log(`For SMP or VUE to work correctly, you MUST include the following in the head of your page:
+<script src=http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js></script>`)
+}
 
 // defined alias
 _import=bbc.newslabs.fImport
@@ -396,6 +404,10 @@ _import=bbc.newslabs.fImport
 document.addEventListener('DOMContentLoaded', function() {
     bbc.newslabs.fHeader()
     bbc.newslabs.fFooter()
+})
+
+// Setup common dependencies via requirejs - SMP and VUE. Others may follow.
+if(typeof(require)=="function") {
     require({
         paths: {
             "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
@@ -405,7 +417,9 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         waitSeconds: 30
     })
-})
+} else {
+    console.log('WARNING: require not available so unable to import SMP or VUE!')
+}
 
 // include a standard local this.js script
 bbc.newslabs.fImport("this.js")

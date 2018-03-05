@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
         paths: {
             "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
             "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3",
-            "vuedev": "https://vuejs.org/js/vue.js",
+            "vuedev": "https://vuejs.org/js/vue",
             "vue": "https://cdn.jsdelivr.net/npm/vue",
         },
         waitSeconds: 30

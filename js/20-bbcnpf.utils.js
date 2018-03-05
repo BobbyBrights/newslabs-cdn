@@ -192,3 +192,16 @@ bbcnpf.utils.timecode2seconds=function(tc, fps)
     var f=bbcnpf.utils.timecode2frames(tc, fps)
     return Number(f/fps).toFixed(2)
 }
+
+bbcnpf.utils.mmss2seconds=function(mmss)
+{
+    var mmss=start.split(':')
+    return parseInt(mmss[0])*60 + parseInt(mmss[1])
+}
+
+bbcnpf.utils.seconds2mmss=function(seconds)
+{
+    var rs=seconds%60;
+    var m=(seconds-rs)/60
+    return bbcnpf.utils.pad(m,2) + ':' + bbcnpf.utils.pad(rs,2)
+}

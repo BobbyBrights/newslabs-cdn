@@ -393,7 +393,7 @@ document.querySelectorAll('script').forEach(function(script){
     if(script.src.indexOf('/require.js')>-1)haveRequire=true
 })
 if(!haveRequire){
-    console.log(`For SMP or VUE to work correctly, you MUST include the following in the head of your page:
+    console.error(`For SMP or VUE to work correctly, you MUST include the following in the head of your page, BEFORE the newslabs-cdn/app.js script tag:
 <script src=http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js></script>`)
 }
 
@@ -418,7 +418,7 @@ if(typeof(require)=="function") {
         waitSeconds: 30
     })
 } else {
-    console.log('WARNING: require not available so unable to import SMP or VUE!')
+    console.error('WARNING: The require module is not installed - unable to import SMP or VUE!')
 }
 
 // include a standard local this.js script

@@ -169,9 +169,23 @@ if (!document.getElementsByTagName('meta')["viewport"])
     void(document.getElementsByTagName('head')[0].appendChild(e))
 }
 
-// add the std css file (which itself brings includes bootstrap)
+// general dependences
+
+// the Reith fonts
 bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/fonts/reith/font.css")
+
+// a css bundle, includes bootstrap
 bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
+
+// for SMP
+bbc.newslabs.fAddFile("http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js")
+require({
+    paths: {
+        "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
+        "bump-3":"http://emp.bbci.co.uk/emp/bump-3/bump-3",
+    },
+    waitSeconds: 30
+})
 
 // defined alias
 _import=bbc.newslabs.fImport

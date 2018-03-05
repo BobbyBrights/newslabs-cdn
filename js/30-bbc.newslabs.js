@@ -179,13 +179,6 @@ bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
 
 // for SMP
 bbc.newslabs.fAddFile("http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js")
-require({
-    paths: {
-        "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
-        "bump-3":"http://emp.bbci.co.uk/emp/bump-3/bump-3",
-    },
-    waitSeconds: 30
-})
 
 // defined alias
 _import=bbc.newslabs.fImport
@@ -194,6 +187,13 @@ _import=bbc.newslabs.fImport
 document.addEventListener('DOMContentLoaded', function() {
     bbc.newslabs.fHeader()
     bbc.newslabs.fFooter()
+    require({
+        paths: {
+            "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
+            "bump-3":"http://emp.bbci.co.uk/emp/bump-3/bump-3",
+        },
+        waitSeconds: 30
+    })
 })
 
 // include a standard local this.js script

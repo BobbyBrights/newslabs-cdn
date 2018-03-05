@@ -413,7 +413,7 @@ if(typeof(require)=="function") {
             "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
             "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3",
             "vuedev": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue",
-            "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min".
+            "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min",
         },
         waitSeconds: 30
     })

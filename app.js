@@ -210,8 +210,8 @@ bbcnpf.utils.timecode2seconds=function(tc, fps)
 
 bbcnpf.utils.mmss2seconds=function(mmss)
 {
-    var mmss=start.split(':')
-    return parseInt(mmss[0])*60 + parseInt(mmss[1])
+    var x=mmss.split(':')
+    return parseInt(x[0])*60 + parseInt(x[1])
 }
 
 bbcnpf.utils.seconds2mmss=function(seconds)

@@ -216,8 +216,9 @@ bbcnpf.utils.mmss2seconds=function(mmss)
 
 bbcnpf.utils.seconds2mmss=function(seconds)
 {
-    var rs=seconds%60;
-    var m=(seconds-rs)/60
+    var s=parseInt(seconds)
+    var rs=s%60;
+    var m=(s-rs)/60
     return bbcnpf.utils.pad(m,2) + ':' + bbcnpf.utils.pad(rs,2)
 }
 
@@ -427,6 +428,7 @@ if(typeof(require)=="function") {
             "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3",
             "vuedev": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue",
             "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min",
+            "vuerouter": "https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min",
         },
         waitSeconds: 30
     })

@@ -201,7 +201,8 @@ bbcnpf.utils.mmss2seconds=function(mmss)
 
 bbcnpf.utils.seconds2mmss=function(seconds)
 {
-    var rs=seconds%60;
-    var m=(seconds-rs)/60
+    var s=parseInt(seconds)
+    var rs=s%60;
+    var m=(s-rs)/60
     return bbcnpf.utils.pad(m,2) + ':' + bbcnpf.utils.pad(rs,2)
 }

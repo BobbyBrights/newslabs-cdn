@@ -392,6 +392,15 @@ if (!document.getElementsByTagName('meta')["viewport"])
     void(document.getElementsByTagName('head')[0].appendChild(e))
 }
 
+// ensure the page had a apple-web-app meta
+if (!document.getElementsByTagName('meta')["apple-mobile-web-app-capable"])
+{
+    var e=document.createElement('meta')
+    e.name='apple-mobile-web-app-capable'
+    e.content='yes'
+    void(document.getElementsByTagName('head')[0].appendChild(e))
+}
+
 // general dependences
 
 // the Reith fonts

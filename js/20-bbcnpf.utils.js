@@ -1,3 +1,11 @@
+/*
+ * general useful functions
+ */
+var bbc=bbc||{}
+// a convenience JSON logging function
+bbc.Jlog=function(_j){
+    console.log(JSON.stringify(_j, null, "  "))
+}
 
 /*
  * General broadcast-related utils

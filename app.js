@@ -17,9 +17,15 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
  * general useful functions
  */
 var bbc=bbc||{}
-// a convenience JSON logging function
-bbc.Jlog=function(_j){
+bbc.Jlog=function(_j)
+{
+    // pretty-print/freeze a JSON object
     console.log(JSON.stringify(_j, null, "  "))
+}
+bbc.Jcp=function($json)
+{
+    // copy a JSON object - use when you want a true copy, not just another reference
+    return JSON.parse(JSON.stringify($json))
 }
 
 /*

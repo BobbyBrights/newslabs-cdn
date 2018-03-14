@@ -402,7 +402,8 @@ if (!document.getElementsByTagName('meta')["viewport"])
 {
     var e=document.createElement('meta')
     e.name='viewport'
-    e.content='width=device-width,initial-scale=1.0'
+    //e.content='width=device-width,initial-scale=1.0'
+    e.content='initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no'
     void(document.getElementsByTagName('head')[0].appendChild(e))
 }
 

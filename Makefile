@@ -1,5 +1,5 @@
 phoney: all
 
 all:
-	cat css/* > app.css
-	cat js/* > app.js
+	cat css/*.css > app.css
+	cat js/*.js > app.js

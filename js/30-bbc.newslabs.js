@@ -217,9 +217,9 @@ if(typeof(require)=="function") {
             "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min",
             "vuerouter": "https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min",
             "vuex": "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.common.min",
-            "hammer": "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min",
-            "jquery-hammer": "https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min",
-            "vue-hammer": "https://cdn.jsdelivr.net/npm/vue-hammer@0.2.0/index.min",
+            "hammerjs": "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min",
+            "jqueryhammer": "https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min",
+            "vuehammer": "https://cdn.jsdelivr.net/npm/vue-hammer@0.2.0/index.min",
         },
         waitSeconds: 30
     })

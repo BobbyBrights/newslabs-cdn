@@ -197,24 +197,20 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 // Setup common dependencies via requirejs - SMP and VUE. Others may follow.
-if(typeof(require)=="function") {
-    require({
-        paths: {
-            "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
-            "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3",
-            "vuedev": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue",
-            "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min",
-            "vuerouter": "https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min",
-            "vuex": "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.common.min",
-            "hammerjs": "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min",
-            "jqueryhammer": "https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min",
-            "vuehammer": "https://cdn.jsdelivr.net/npm/vue-hammer@0.2.0/index.min",
-        },
-        waitSeconds: 30
-    })
-} else {
-    console.error('WARNING: The require module is not installed - unable to import SMP or VUE!')
-}
+require({
+    paths: {
+        "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
+        "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3",
+        "vuedev": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min",
+        "vuerouter": "https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min",
+        "vuex": "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.common.min",
+        "hammerjs": "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min",
+        "jqueryhammer": "https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min",
+        "vuehammer": "https://cdn.jsdelivr.net/npm/vue-hammer@0.2.0/index.min",
+    },
+    waitSeconds: 30
+})
 
 // include a standard local this.js script
-bbc.newslabs.fImport("this.js")
+require(['this'])

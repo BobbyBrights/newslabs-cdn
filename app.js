@@ -24,11 +24,27 @@ window.Modernizr=function(e,t,n){function r(e){b.cssText=e}function o(e,t){retur
  * general useful functions
  */
 var bbc=bbc||{}
-bbc.Jlog=function(_j)
+bbc.Jlog=function(_j, asString)
 {
     // pretty-print/freeze a JSON object
     if (typeof(bbc.$disableJlog)==='undefined') {
-        console.log(JSON.stringify(_j, null, "  "))
+        if (typeof(_j)=='string' || typeof(_j)=='number') {
+            console.log(_j);
+        } else if (Array.isArray(_j)) {
+            if (asString) {
+                console.log(_j.slice(0).toString())
+            } else {
+                console.log(_j.slice(0))
+            }
+        } else if (typeof(_j)=='object') {
+            if (asString) {
+                console.log(JSON.stringify(bbc.Jcp(_j), null, "  "))
+            } else {
+                console.log(bbc.Jcp(_j))
+            }
+        } else {
+            console.log(_j)
+        }
     }
 }
 bbc.Jcp=function($json)

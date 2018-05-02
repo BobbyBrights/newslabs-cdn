@@ -431,19 +431,6 @@ bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/fonts/reith/font.css")
 // a css bundle, includes bootstrap
 bbc.newslabs.fAddFile("https://bbc.github.io/newslabs-cdn/app.css")
 
-// check that requirejs has been injected in the defining document. alert if not and suggest a remedy.
-// it is required for SMP to embed correctly.
-/*
-var haveRequire=false
-document.querySelectorAll('script').forEach(function(script){
-    if(script.src.indexOf('/require.js')>-1)haveRequire=true
-})
-if(!haveRequire){
-    console.error(`For SMP or VUE to work correctly, you MUST include the following in the head of your page, BEFORE the newslabs-cdn/app.js script tag:
-<script src=http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js></script>`)
-}
-*/
-
 // defined alias
 _import=bbc.newslabs.fImport
 

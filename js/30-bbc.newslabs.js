@@ -192,9 +192,14 @@ _import=bbc.newslabs.fImport
 
 // insert (and/or populate) header and footer elements when the page is ready
 document.addEventListener('DOMContentLoaded', function() {
+    bbc.newslabs.fOnCDNReady()
+})
+
+// what to do when the CDN (i.e. this script) is ready to go
+bbc.newslabs.fOnCDNReady=function() {
     bbc.newslabs.fHeader()
     bbc.newslabs.fFooter()
-})
+}
 
 // Setup common dependencies via requirejs - SMP and VUE. Others may follow.
 require({

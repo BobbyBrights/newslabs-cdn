@@ -27,7 +27,9 @@ var bbc=bbc||{}
 bbc.Jlog=function(_j)
 {
     // pretty-print/freeze a JSON object
-    console.log(JSON.stringify(_j, null, "  "))
+    if (typeof(bbc.$disableJlog)==='undefined') {
+        console.log(JSON.stringify(_j, null, "  "))
+    }
 }
 bbc.Jcp=function($json)
 {

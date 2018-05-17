@@ -26,7 +26,14 @@ bbc.newslabs.fHeader=function()
         b.insertBefore(e, b.firstChild)
     }
 
-    document.title=this.fGetMeta('app') + ' :: A BBC News Labs prototype'
+    // require bowser
+    require(['bowser'], function(bowser){
+        if (bowser.mobile || bowser.tablet) {
+            document.title=bbc.newslabs.fGetMeta('app')
+        } else {
+            document.title=bbc.newslabs.fGetMeta('app') + ' :: A BBC News Labs prototype'
+        }
+    })
 }
 
 bbc.newslabs.fLogin=function(retval)

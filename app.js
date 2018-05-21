@@ -482,6 +482,7 @@ require({
         "hammerjs": "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min",
         "jqueryhammer": "https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min",
         "vuehammer": "https://cdn.jsdelivr.net/npm/vue-hammer@0.2.0/index.min",
+        "echo": "https://mybbc-analytics.files.bbci.co.uk/echo-client-js/echo-11.0.2.min",
     },
     waitSeconds: 30
 })

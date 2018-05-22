@@ -354,7 +354,7 @@ bbc.newslabs.fGetMeta=function(tagname)
         this.$meta.author=_findtag(tags, 'author')
         this.$meta.teamlogo=_findtag(tags, 'teamlogo')
         this.$meta.generator=_findtag(tags, 'generator')
-        this.$meta.echosite=_findtag(tags, 'echo-site', 'news')
+        this.$meta.bbcsite=_findtag(tags, 'bbc-site', 'news')
     }
 
     return this.$meta[tagname]
@@ -498,7 +498,7 @@ require({
 // init the BBC's echo (DAX) library
 require(['echo'], function(echo){
     var appname='newslabs-'+bbc.newslabs.fGetMeta('app').toLowerCase()
-    bbc.newslabs.echo={
+    bbc.newslabs.dax={
         lib: echo,
         client: new echo.EchoClient(
             appname,
@@ -506,9 +506,9 @@ require(['echo'], function(echo){
         )
     }
 
-    var e=bbc.newslabs.echo
-    e.$pagename=appname.replace('-', '.')+'.page'
-    e.view=function(o) {
+    var d=bbc.newslabs.dax
+    d.$pagename=appname.replace('-', '.')+'.page'
+    d.view=function(o) {
         bbc.Jlog({
             echo: 'viewEvent',
             page: this.$pagename,
@@ -517,15 +517,15 @@ require(['echo'], function(echo){
         this.client.viewEvent(this.$pagename, o)
     }
 
-    var ec=e.client
+    var ec=d.client
     ec.addLabel('name', e.$pagename)
     ec.addLabel('ml_name', 'echo')
     ec.addLabel('ml_version', '11.0.2')
-    ec.addLabel('bbc_site', bbc.newslabs.$meta.echosite)
+    ec.addLabel('bbc_site', bbc.newslabs.$meta.bbcsite)
     ec.setAppVersion(bbc.newslabs.$meta.version)
  
     // and register our page load
-    bbc.newslabs.echo.view({action_name: 'ready'})
+    bbc.newslabs.dax.view({action_name: 'ready'})
 })
 
 

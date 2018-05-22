@@ -235,7 +235,7 @@ require({
 
 // init the BBC's echo (DAX) library
 require(['echo'], function(echo){
-    var appname='newslabs-'+bbc.newslabs.fGetMeta('app').toLowerCase()
+    var appname='newslabs-'+bbc.newslabs.fGetMeta('app').toLowerCase().replace(/ /g, '')
     bbc.newslabs.dax={
         lib: echo,
         client: new echo.EchoClient(

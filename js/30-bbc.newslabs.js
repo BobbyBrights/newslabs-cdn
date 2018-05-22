@@ -246,13 +246,14 @@ require(['echo'], function(echo){
 
     var d=bbc.newslabs.dax
     d.$pagename=appname.replace('-', '.')+'.page'
-    d.view=function(o) {
+
+    d.view=function(msg) {
         bbc.Jlog({
             echo: 'viewEvent',
             page: this.$pagename,
-            arg: o,
+            action_name: msg,
         })
-        this.client.viewEvent(this.$pagename, o)
+        this.client.viewEvent(this.$pagename, {action_name: msg})
     }
 
     var ec=d.client
@@ -263,7 +264,7 @@ require(['echo'], function(echo){
     ec.setAppVersion(bbc.newslabs.$meta.version)
  
     // and register our page load
-    bbc.newslabs.dax.view({action_name: 'ready'})
+    bbc.newslabs.dax.view('ready')
 })
 
 

@@ -350,19 +350,27 @@ bbc.newslabs.fGetMeta=function(tagname)
         this.$meta=this.$meta||{}
 
         this.$meta.app=_findtag(tags, 'application-name')
+        this.$meta.version=_findtag(tags, 'application-version', '1.0.0')
         this.$meta.author=_findtag(tags, 'author')
         this.$meta.teamlogo=_findtag(tags, 'teamlogo')
         this.$meta.generator=_findtag(tags, 'generator')
+        this.$meta.echosite=_findtag(tags, 'echo-site', 'news')
     }
 
     return this.$meta[tagname]
 
-    function _findtag(tags, tag)
+    function _findtag(tags, tag, default_value)
     {
         if (typeof(tags[tag])!=='undefined')
         {
             return tags[tag].getAttribute('content')
-        } else {
+        }
+        else if (typeof(default_value)!=='undefined')
+        {
+            return default_value
+        }
+        else
+        {
             return ''
         }
     }
@@ -486,6 +494,40 @@ require({
     },
     waitSeconds: 30
 })
+
+// init the BBC's echo (DAX) library
+require(['echo'], function(echo){
+    var appname='newslabs-'+bbc.newslabs.fGetMeta('app').toLowerCase()
+    bbc.newslabs.echo={
+        lib: echo,
+        client: new echo.EchoClient(
+            appname,
+            echo.Enums.ApplicationType.MOBILE_WEB
+        )
+    }
+
+    var e=bbc.newslabs.echo
+    e.$pagename=appname.replace('-', '.')+'.page'
+    e.view=function(o) {
+        bbc.Jlog({
+            echo: 'viewEvent',
+            page: this.$pagename,
+            arg: o,
+        })
+        this.client.viewEvent(this.$pagename, o)
+    }
+
+    var ec=e.client
+    ec.addLabel('name', e.$pagename)
+    ec.addLabel('ml_name', 'echo')
+    ec.addLabel('ml_version', '11.0.2')
+    ec.addLabel('bbc_site', bbc.newslabs.$meta.echosite)
+    ec.setAppVersion(bbc.newslabs.$meta.version)
+ 
+    // and register our page load
+    bbc.newslabs.echo.view({action_name: 'ready'})
+})
+
 
 // include a standard local this.js script
 require(['this'])

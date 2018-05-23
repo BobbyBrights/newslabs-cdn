@@ -93,6 +93,7 @@ bbc.newslabs.fGetMeta=function(tagname)
         this.$meta.teamlogo=_findtag(tags, 'teamlogo')
         this.$meta.generator=_findtag(tags, 'generator')
         this.$meta.bbcsite=_findtag(tags, 'bbc-site', 'newslabs')
+        this.$meta.reith=_findtag(tags, 'reith', 'false')
     }
 
     return this.$meta[tagname]
@@ -261,6 +262,11 @@ require(['echo'], function(echo){
     ec.addLabel('ml_name', 'echo')
     ec.addLabel('ml_version', '11.0.2')
     ec.addLabel('bbc_site', bbc.newslabs.$meta.bbcsite)
+
+    if (bbc.newslabs.fGetMeta('reith')!=='false') {
+        ec.addLabel('ns_site', 'intranet')
+    }
+
     ec.setAppVersion(bbc.newslabs.$meta.version)
  
     // and register our page load

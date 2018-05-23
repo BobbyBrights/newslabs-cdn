@@ -92,7 +92,7 @@ bbc.newslabs.fGetMeta=function(tagname)
         this.$meta.author=_findtag(tags, 'author')
         this.$meta.teamlogo=_findtag(tags, 'teamlogo')
         this.$meta.generator=_findtag(tags, 'generator')
-        this.$meta.bbcsite=_findtag(tags, 'bbc-site', 'news')
+        this.$meta.bbcsite=_findtag(tags, 'bbc-site', 'newslabs')
     }
 
     return this.$meta[tagname]
